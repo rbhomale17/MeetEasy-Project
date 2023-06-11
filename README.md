@@ -15,7 +15,7 @@
 
 ***Team Member-3 & Student Code*** : ***Aniket Sanjay Jadhao ( fw23_0192 ) https://github.com/Andy18j***
 
-***Team Member-4 & Student Code*** : ***Rushi Chate ( fw23_0075 ) https://github.com/rushichate***
+***Team Member-4 & Student Code*** : ***Rushikesh Chate ( fw23_0075 ) https://github.com/rushichate***
 
 ***IA Manager: Inder Pal***
 
