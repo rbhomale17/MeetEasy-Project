@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^7.2.4",
+    "nodemon": "^2.0.22",
+    "peer": "^1.0.0",
+    "simple": "^0.2.0",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.6.2",
+    "uuid": "^9.0.0"
+  }
+}
