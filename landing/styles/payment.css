@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+#main h3{
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5px;
+}
+#container{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+img{
+    width: 10%;
+}
+.each_div>div{
+    margin-left: 12px;
+}
+.subType{
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(72, 71, 71);
+}
+.each_div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+   
+    border-bottom: 0.5px solid rgb(170, 167, 167);
+
+}
+#leftdiv :nth-child(5){
+    
+    border-bottom: none;
+}
+.each_div:hover{
+    cursor: pointer;
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px;
+}
+#leftdiv,#middlediv{
+    border-right: 1px solid rgb(196, 196, 196);
+    width: 40%;
+   
+}
+.options{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px; 
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    margin-top: 35px;
+    
+}
+#select_header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#select_header>div:nth-child(1){
+    line-height: 10px;
+}
+#middlediv{
+    margin: 10px;
+    padding-right: 10px;
+    border-right: 1px dashed gray;
+}
+#middlediv>p{
+    /* border: 1px solid red; */
+    margin-top: 15px;
+}
+#middlediv img{
+    width: 12%;
+}
+.subType_middle{
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.pay_options{
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid gray;
+}
+.pay_options>p{
+    margin-left: 20px;
+}
+.pay_options:nth-child(3){
+    border: none;
+}
+.pay_options:hover{
+    cursor: pointer;
+    background-color: rgb(227, 227, 227);
+    border-radius: 10px;
+}
+#rightdiv{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.QRdiv{
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+}
+.QRdiv :nth-child(2){
+    
+    width: 80%;
+}
+.imges img{
+    
+    width: 40px;
+}
+.imges img:nth-child(2){
+   
+    width: 40px;
+}
+#input1{
+    width: 80%;
+    height: 35px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: 2px solid rgb(45, 199, 45);
+    border-radius: 5px;
+}
+#input2,#input3{
+    width: 35%;
+    height: 35px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: 2px solid rgb(45, 199, 45);
+    border-radius: 5px;
+}
+#input3{
+    margin-left: 20px;
+}
+#savecard{
+    width: 51%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+#savecard>p{
+    color: rgb(112, 112, 112);
+}
+.checkbox1{
+    accent-color: green;
+}
+#paybtn{
+    margin-top: 40px;
+    width: 8rem;
+    padding: 8px;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    margin-left: 30%;
+}
+#paybtn:hover{
+    cursor: pointer;
+    background-color: rgb(12, 200, 12);
+}
+.wallet_div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 3opx ;
+    background-color: azure;
+}
+#walletpaybtn{
+    margin-top: 120px;
+    padding: 8px;
+    width: 8rem;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    margin-left: 30%;
+    color: white;
+}
+.netbanking{
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.netbanking:hover{
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+}
+
+
+
+
