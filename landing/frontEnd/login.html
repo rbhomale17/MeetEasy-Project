@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/signup.css">
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <title>HelthBooster -Log in</title>
+  <link rel="icon" href="./titleLogo.jpg" type="image/icon type">
+  <meta charset="UTF-8">
+  <meta property="og:title" content="HelathBooster.com">
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <i class="fa-solid fa-user-plus"></i>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input onkeyup="validationEmail()" type="email" id="email" placeholder="Enter Your Email">
+        <span id="email-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input onmouseleave="validationPassword()" type="password" id="password" placeholder="Enter Your Password">
+        <span id="password-error"></span>
+      </div>
+
+      <button id="Submit">Submit</button>
+      <span id="submit-error"></span>
+      <h4 id="login">Don't Have Account: <a href="./signup.html">Click here for Sign up</a></h4>
+      <br>
+      <h3>OR</h3>
+      <br>
+      <div id="border-google">
+        <a id="submit-google" href="http://localhost:3000/auth/google"><img
+            src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="">Continue With
+          Google</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+<script src="./scripts/login.js"></script>
+
+</html>

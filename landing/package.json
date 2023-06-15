@@ -14,8 +14,20 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongodb": "^5.6.0",
-    "mongoose": "^7.2.4",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "bcrypt": "^5.1.0",
+    "brcypt": "^1.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.1.4",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "uuid": "^9.0.0",
+    "uuidv4": "^6.2.13",
+    "i": "^0.3.7",
+    "npm": "^9.6.7",
+    "mongoose": "^7.1.0"
   }
 }
