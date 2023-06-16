@@ -26,3 +26,6 @@
 ***Front End: CSS, HTML, JAVASCRIPT***
 
 ***Back End: CSS, HTML, JAVASCRIPT, NodeJs, Express, MongoDB, Socket.io, Websocket & Mongoose.***
+
+
+# video server link https://nxm201-video-server.onrender.com
