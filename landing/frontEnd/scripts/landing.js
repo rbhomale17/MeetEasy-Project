@@ -76,3 +76,12 @@ image.setAttribute('src', userDetails.picture);
 image.setAttribute('alt', userDetails.name);
 imageDiv.append(image);
 // http://localhost:3000/photos/files/648b04ab43adde36fe392b22
+
+let amount = localStorage.getItem('amount') ||{};
+function logout(){
+
+  localStorage.removeItem('userDetails');
+  localStorage.removeItem('amount');
+  location.href = 'index.html'
+
+}

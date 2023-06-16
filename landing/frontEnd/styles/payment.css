@@ -5,7 +5,9 @@
 #main{
     width: 80%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 120px;
+    /* background-color: rgb(179, 219, 236); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 #main h3{
     margin-bottom: 10px;
@@ -15,7 +17,7 @@
 #container{
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+    background-color: rgba(166, 240, 181, 0.477);
 }
 
 img{
@@ -59,7 +61,7 @@ img{
     margin: 10px;
     padding: 5px;
     border-radius: 5px; 
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(173, 243, 237);
     text-align: center;
     margin-top: 35px;
     
@@ -208,4 +210,44 @@ img{
 
 
 
+
+@media(max-width:500px){
+    #main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #container{
+        width: 200%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        /* background-color: rgba(166, 240, 181, 0.477); */
+        margin-right: 0px;
+    }
+    .each_div{
+        width: 600px;
+        border: none;
+    }
+    #middlediv{
+      width: 50%;
+    }
+    #leftdiv{
+        width: 50%;
+        
+    }
+    .pay_options{
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgb(203, 41, 41);
+    }
+    .each_div:hover{
+        width: 90%;
+        cursor: pointer;
+        background-color: rgb(152, 230, 195);
+        border-radius: 10px;
+    }
+}
 

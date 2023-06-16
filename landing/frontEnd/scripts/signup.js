@@ -121,7 +121,7 @@ function RegisterUser() {
     }).then((res) => res.json()).then((data) => {
         alert(`${data.msg}`);
         if (data.err == false) return;
-        alert("Redirecting to Login Page");
+        alert("Redirecting to Dashboard Page");
         let userData = data.user;
         console.log(data.user);
         localStorage.setItem('userDetails', JSON.stringify(userData))
