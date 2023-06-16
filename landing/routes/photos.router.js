@@ -5,8 +5,8 @@ require('dotenv').config();
 const multer = require('multer');
 const { MongoClient, ObjectId } = require('mongodb');
 const upload = multer();
-const mongo_url = 'mongodb+srv://bhomale:rushikesh@clusterrushi.vl7py0z.mongodb.net/?retryWrites=true&w=majority';
-const dbName = 'MeetEasy-Database';
+const mongo_url = process.env.mongo_url_photos;
+const dbName = process.env.dbName;
 
 
 photoRouter.get('/', (req, res) => {
