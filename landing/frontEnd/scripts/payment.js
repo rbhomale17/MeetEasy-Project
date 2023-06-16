@@ -60,13 +60,13 @@ Walletbutton.addEventListener("click",()=>{
     btn1.innerText=`PAY ₹ ${total}` ;
 
     btn1.addEventListener("click",()=>{
-        main.innerHTML=`<h1> Your Payment Is Successfull </h1>`;
+        main.innerHTML=`<h1> Your payment has been successfully completed </h1>`;
         // main.style.textAlign="center";
         main.style.display="flex";
         main.style.justifyContent="center";
         main.style.alignItems="center";
        setTimeout(() => {
-        location.href="index.html";
+        location.href="landing.html";
        },2000);
 
     })
@@ -147,7 +147,21 @@ NETbankingbutton.addEventListener("click",()=>{
 
             div5.append(image4,text3); 
 
-    card.append(section1,div2,div3,div4,div5);
+            let btn1=document.createElement("button");
+            btn1.setAttribute("id","walletpaybtn");
+            btn1.innerText=`PAY ₹ ${total}` ;
+            btn1.addEventListener("click",()=>{
+                main.innerHTML=`<h1>Your payment has been successfully completed </h1>`;
+                // main.style.textAlign="center";
+                main.style.display="flex";
+                main.style.justifyContent="center";
+                main.style.alignItems="center";
+               setTimeout(() => {
+                location.href="landing.html";
+               },2000);
+        
+            })
+    card.append(section1,div2,div3,div4,div5,btn1);
     mainsection.append(card);
 });
 
@@ -217,17 +231,46 @@ function showdata(){
     paybtn.style.color="white";
 
     paybtn.addEventListener("click",()=>{
-        main.innerHTML=`<h1> Your Payment Is Successfull </h1>`;
+        main.innerHTML=`<h1> Your payment has been successfully completed </h1>`;
         // main.style.textAlign="center";
         main.style.display="flex";
         main.style.justifyContent="center";
         main.style.alignItems="center";
        setTimeout(() => {
-        location.href="index.html";
+        location.href="landing.html";
        },2000);
 
     })
     
     card.append(section1,div2,input2,input3,div4,paybtn);
     mainsection.append(card);
+}
+
+let header = document.querySelector("header");
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  header.classList.toggle("shadow", window.scrollY > 0);
+});
+
+menu.onclick = () => {
+  navbar.classList.toggle("active");
+};
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};
+
+let userDetails = JSON.parse(localStorage.getItem('userDetails')) || {};
+let signUser = document.getElementById('username');
+
+signUser.textContent = `${userDetails.name}`
+
+let amount = localStorage.getItem('amount') ||{};
+function logout(){
+
+  localStorage.removeItem('userDetails');
+  localStorage.removeItem('amount');
+  location.href = 'index.html'
+
 }

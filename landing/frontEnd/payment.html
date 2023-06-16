@@ -1,61 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+    <title>MeetEasy-Payment</title>
+    <link rel="icon" href="/logoforHtml.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="MeetEasy.com">
     <link rel="stylesheet" href="./styles/payment.css">
+    <link rel="stylesheet" href="./styles/landing.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
 </head>
+
 <body>
+    <!-- Navbar  Section Start -->
+
+    <header>
+        <a href="./landing.html" class="logo"><img src="./images/logo.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar" id="nav-menu">
+            <li><a class="nav-link home" href="./plans.html">View Plans</a></li>
+            <li><a class="nav-link about" id="videoCall" href="#videoCall">Video Call</a></li>
+            <li><a class="nav-link skills" id="ScreenShare" href="#ScreenShare">Screen Share</a></li>
+            <li><a class="nav-link projects" id="Message" href="#Message">Message</a></li>
+            <div class="dropdown">
+                <a href="#" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a>
+                <div class="dropdown-content">
+                    <a id="log" onclick="logout()">Log out</a>
+                </div>
+            </div>
+        </ul>
+    </header>
+
+    <!-- Navbar Section End -->
+
     <h1 id="plan-amt"></h1>
     <div id="cont">
         <div id="main">
-            
+
             <h3>Select a Payment method</h3>
             <div id="container">
-                <div id="leftdiv" >
-                    
+                <div id="leftdiv">
+
                     <p class="options">OTHER PAYMENT OPTIONS</p>
-                   
-                    
+
+
                     <div id="UPIbutton" class="each_div">
-                        <img src="https://zoomcar-assets.zoomcar.com/images/original/9fcb8335a89265849f23225858489f2a9ce8e121.png?1584453574" alt="">
+                        <img src="https://zoomcar-assets.zoomcar.com/images/original/9fcb8335a89265849f23225858489f2a9ce8e121.png?1584453574"
+                            alt="">
                         <div>
                             <p>UPI</p>
                             <p class="subType">Google Pay,PhonePe,BHIM UPI</p>
                         </div>
                     </div>
-    
+
                     <div id="CARDbutton" class="each_div">
-                        <img src="https://zoomcar-assets.zoomcar.com/images/original/97f051d76793fffe5ab182ffa58b8eb47c5ba0cf.png?1584453494" alt="">
+                        <img src="https://zoomcar-assets.zoomcar.com/images/original/97f051d76793fffe5ab182ffa58b8eb47c5ba0cf.png?1584453494"
+                            alt="">
                         <div>
                             <p>Credit / Debit / ATM Card</p>
                             <p class="subType">All major card providers are supported</p>
                         </div>
                     </div>
-    
+
                     <div id="Walletbutton" class="each_div">
-                        <img src="https://zoomcar-assets.zoomcar.com/images/original/1317404625e385185d23ea43a0c34569d6432d09.png?1632130014" alt="">
+                        <img src="https://zoomcar-assets.zoomcar.com/images/original/1317404625e385185d23ea43a0c34569d6432d09.png?1632130014"
+                            alt="">
                         <div>
                             <p>Mobile Wallet</p>
                             <p class="subType">All major wallets are supported</p>
                         </div>
                     </div>
-     
+
                     <div id="NETbankingbutton" class="each_div">
-                        <img src="https://zoomcar-assets.zoomcar.com/images/original/4dd051886e5403aafb9725b7d2ab42c80f9b1df6.png?1584453529" alt="">
+                        <img src="https://zoomcar-assets.zoomcar.com/images/original/4dd051886e5403aafb9725b7d2ab42c80f9b1df6.png?1584453529"
+                            alt="">
                         <div>
                             <p>Net Banking</p>
                             <p class="subType">All major banks are supported</p>
                         </div>
                     </div>
-    
+
                 </div>
-    
-    
+
+
                 <!-- middle portion of payment window -->
                 <div id="middlediv">
-                    
+
                     <div id="select_header">
                         <div>
                             <h3>Select a UPI App</h3>
@@ -63,36 +100,39 @@
                         </div>
                         <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" alt="">
                     </div>
-    
+
                     <p class="options">PREFERRED PAYMENT OPTIONS</p>
-    
+
                     <div>
-    
+
                         <div class="pay_options">
-                            <img src="https://zoomcar-assets.zoomcar.com/images/original/4aef7198237a74ac187c75d270f8d516cfaa5e9b.png?1584453889" alt="">
+                            <img src="https://zoomcar-assets.zoomcar.com/images/original/4aef7198237a74ac187c75d270f8d516cfaa5e9b.png?1584453889"
+                                alt="">
                             <p> Google Pay</p>
                         </div>
-    
+
                         <div class="pay_options">
-                            <img src="https://zoomcar-assets.zoomcar.com/images/original/2f05f4e5f91bf2f481569c3a3c4345b2cf447ff7.png?1584453837" alt="">
+                            <img src="https://zoomcar-assets.zoomcar.com/images/original/2f05f4e5f91bf2f481569c3a3c4345b2cf447ff7.png?1584453837"
+                                alt="">
                             <p>Phone Pay</p>
                         </div>
-    
+
                         <div class="pay_options">
-                            <img src="https://zoomcar-assets.zoomcar.com/images/original/91871c2e202fd271724063a4a38033612d37c219.png?1584602070" alt="">
+                            <img src="https://zoomcar-assets.zoomcar.com/images/original/91871c2e202fd271724063a4a38033612d37c219.png?1584602070"
+                                alt="">
                             <p>Paytm UPI</p>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <!-- ends here................. -->
-    
+
                 <div id="rightdiv">
                     <div class="QRdiv">
                         <h3>Scan QR code</h3>
-                        <img id="qrcode" src="./Images/qrcode.png" alt="">
+                        <img id="qrcode" src="./images/Rushikesh QR.png" alt="">
                         <p>Click to see QR code</p>
                         <div class="imges">
                             <img src="https://www.zoomcar.com/build/b0e4e02f6e16bd9e2a822cfe5348cab8.svg" alt="">
@@ -100,11 +140,64 @@
                             <img src="https://www.zoomcar.com/build/3ef19a1071cc8527266cd278b3782406.svg" alt="">
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
-    
+    <!-- FOOTER -->
+
+    <div id="f-main">
+        <footer>
+            <div class="f-cont">
+                <div class="f-row">
+                    <div class="col" id="about">
+                        <h3>About Us</h3>
+                        <p>Introducing our advanced video conferencing platform, connecting people effortlessly for both
+                            professional and personal purposes. Host or join high-quality virtual meetings, collaborate
+                            seamlessly,
+                            and stay connected globally. Enjoy crystal-clear audio, smooth video, and an intuitive
+                            interface for
+                            hassle-free communication. Join us and experience the future of online meetings for
+                            effortless
+                            collaboration and meaningful connections.</p>
+                        <div class="s-media">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a onclick="window.open('https://github.com/rbhomale17/deluxe-change-1738')"><i
+                                    class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col" id="company">
+                        <h3>OUR COMPANY</h3>
+                        <div class="link">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col" id="category">
+                        <h3>TOP CATEGORIES</h3>
+                        <div class="link">
+                            <a href="#">Messaging</a>
+                            <a href="#">Video Calling</a>
+                            <a href="#">Screen Share</a>
+                        </div>
+                    </div>
+                    <div class="col" id="policy">
+                        <h3>POLICIES & INFO</h3>
+                        <div class="link">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">SUPPORT</a>
+                            <a href="#">For Help, email to care@meeteasy.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FOOTER -->
 </body>
 <script src="./scripts/payment.js"></script>
+
 </html>

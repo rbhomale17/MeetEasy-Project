@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetEasy-Project Code: deluxe-change-1738, Owner: Rushikesh Bhomale</title>
+    <link rel="icon" href="/logoforHtml.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="MeetEasy.com">
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- <link rel="stylesheet" href="./styles/landing.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+</head>
+
+<body>
+    <!-- <h1>This Is Index Page</h1> -->
+    <!-- Navbar  Section Start -->
+
+    <header>
+        <a href="index.html" class="logo"><img src="./images/logo.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar" id="nav-menu">
+            <li><a class="nav-link home" href="#Plans">View Plans</a></li>
+            <li><a class="nav-link about" id="videoCall" href="#features">Video Call</a></li>
+            <li><a class="nav-link skills" id="ScreenShare" href="#features">Screen Share</a></li>
+            <li><a class="nav-link projects" id="Message" href="#features">Message</a></li>
+            <div class="dropdown">
+                <a href="./signup.html" id="sign-in"><i class="fa fa-user"></i> <span
+                        id="username">sign-up/Log-in</span></a>
+                <!-- <div class="dropdown-content">
+                    <a id="log" onclick="logout()">Log out</a>
+                </div> -->
+            </div>
+        </ul>
+    </header>
+
+    <!-- Navbar Section End -->
+
+    <!-- Main Section Start -->
+
+    <section id="home">
+        <div class="home-text">
+            <span>Hello👋,</span>
+            <!-- <h1 id="user-detail-name">Rushikesh Bhomale</h1> -->
+            <h2>Welcome To MeetEasy</h2>
+            <br />
+            <p class="app-intro">Introducing our advanced video conferencing platform, connecting people effortlessly
+                for both
+                professional and personal purposes. Host or join high-quality virtual meetings, collaborate seamlessly,
+                and stay connected globally. Enjoy crystal-clear audio, smooth video, and an intuitive interface for
+                hassle-free communication. Join us and experience the future of online meetings for effortless
+                collaboration and meaningful connections.
+            </p>
+            <!-- <a onclick="logout()"><button class="resume-button" id="resume-button-2">Log out</button>
+            </a> -->
+        </div>
+        <div id="home-img1" class="home-img1">
+            <div id="imageDiv">
+                <img src="https://i.pinimg.com/originals/87/6f/9c/876f9c5858d664d0efa0c476db65ef87.gif"
+                    alt="rushikesh_bhomale">
+            </div>
+            <!-- upload new image here -->
+            <!-- <input id="fileInput" class="resume-button" type="file" name="file" accept=".png, .jpg, .jpeg, .gif"
+                required>
+            <br>
+            <input id="uploadButton" class="resume-button" type="submit"> -->
+        </div>
+    </section>
+
+    <!-- Main Section End -->
+
+    <!-- Features Section Start -->
+
+    <section id="features">
+        <div class="heading">
+            <h2>Features</h2>
+            <span>Explore MeetEasy Features</span>
+        </div>
+        <div class="features-content">
+            <a href="#">
+                <div class="skills-card">
+                    <img class="features-card-img" src="./images/message.gif" alt="html" />
+                    <h4 class="features-card-name">Message</h4>
+                </div>
+            </a>
+            <a href="#">
+                <div class="skills-card">
+                    <img class="features-card-img" src="./images/videoCall.gif" alt="html" />
+                    <h4 class="features-card-name">Video Call</h4>
+                </div>
+            </a>
+            <a href="#">
+                <div class="skills-card">
+                    <img class="features-card-img" src="./images/scrrenShare.png" alt="html" />
+                    <h4 class="features-card-name">Screen Share</h4>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section End -->
+
+    <!-- plan section here -->
+    <section id="Plans">
+        <div class="heading">
+            <h2>Plans & Pricing</h2>
+            <span>Explore MeetEasy Plans</span>
+        </div>
+        <div id="container">
+            <div class="cards">
+                <div class="upper-portion">
+                    <h2>Basic</h2>
+                    <P>Explore Our Basic Plan</P>
+
+                </div>
+                <div class="plan-details">
+                    <h2>₹ 0 </h2>
+                    <p><span>FREE</span></p>
+                    <div class="accessto">
+                        <p><img src="./images/rightTick.png" alt=""> Meetings up to 10 minutes per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> 5 Attendees per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> Team Chat</p>
+                    </div>
+                    <button id="free-plan" onclick="location.href='signup.html'" class="btn">Login to Start</button>
+
+                </div>
+
+            </div>
+            <div class="cards">
+                <div class="upper-portion">
+                    <h2>Pro</h2>
+                    <P>Explore Our Pro Plan</P>
+
+                </div>
+                <div class="plan-details">
+                    <h2> ₹ 199 </h2>
+                    <p><span>Per Month</span></p>
+                    <div class="accessto">
+                        <p><img src="./images/rightTick.png" alt=""> Meetings up to 30 minutes per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> 10 Attendees per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> Team Chat</p>
+                    </div>
+                    <button id="pro-plan" onclick="location.href='signup.html'" class="btn">Login to Buy</button>
+
+                </div>
+
+            </div>
+            <div class="cards">
+                <div class="upper-portion">
+                    <h2>Business</h2>
+                    <P>Explore Our Business Plan</P>
+
+                </div>
+                <div class="plan-details">
+                    <h2> ₹ 399 </h2>
+                    <p><span>Per Month</span></p>
+                    <div class="accessto">
+                        <p><img src="./images/rightTick.png" alt=""> Meetings up to 5 hours per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> 100 Attendees per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> Team Chat</p>
+
+                    </div>
+                    <button id="business-plan" onclick="location.href='signup.html'" class="btn">Login to Buy</button>
+
+                </div>
+
+            </div>
+            <div class="cards">
+                <div class="upper-portion">
+                    <h2>Premium</h2>
+                    <P>Explore Our Premium Plan</P>
+
+                </div>
+                <div class="plan-details">
+                    <h2>₹ 799 </h2>
+                    <p><span>Per Month</span></p>
+                    <div class="accessto">
+                        <p><img src="./images/rightTick.png" alt=""> Meetings up to 30 hours per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> 1000 Attendees per meeting</p>
+                        <p><img src="./images/rightTick.png" alt=""> Team Chat</p>
+                        <p><img src="./images/rightTick.png" alt=""> Cloud Storage unlimited</p>
+                        <!-- <p><img src="./images/rightTick.png" alt=""> Extras SSO, managed domains & more</p> -->
+                    </div>
+                    <button id="premium-plan" onclick="location.href='signup.html'" class="btn">Login to Buy</button>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- plan section here -->
+
+    <!-- FOOTER -->
+
+    <div id="f-main">
+        <footer>
+            <div class="f-cont">
+                <div class="f-row">
+                    <div class="col" id="about">
+                        <h3>About Us</h3>
+                        <p>Introducing our advanced video conferencing platform, connecting people effortlessly for both
+                            professional and personal purposes. Host or join high-quality virtual meetings, collaborate
+                            seamlessly,
+                            and stay connected globally. Enjoy crystal-clear audio, smooth video, and an intuitive
+                            interface for
+                            hassle-free communication. Join us and experience the future of online meetings for
+                            effortless
+                            collaboration and meaningful connections.</p>
+                        <div class="s-media">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a onclick="window.open('https://github.com/rbhomale17/deluxe-change-1738')"><i
+                                    class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col" id="company">
+                        <h3>OUR COMPANY</h3>
+                        <div class="link">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col" id="category">
+                        <h3>TOP CATEGORIES</h3>
+                        <div class="link">
+                            <a href="#">Messaging</a>
+                            <a href="#">Video Calling</a>
+                            <a href="#">Screen Share</a>
+                        </div>
+                    </div>
+                    <div class="col" id="policy">
+                        <h3>POLICIES & INFO</h3>
+                        <div class="link">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">SUPPORT</a>
+                            <a href="#">For Help, email to care@meeteasy.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FOOTER -->
+
+    <!-- Javascript -->
+    <!-- <script src="./scripts/landing.js"></script> -->
+</body>
+<script>
+    let header = document.querySelector("header");
+    let menu = document.querySelector("#menu-icon");
+    let navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("shadow", window.scrollY > 0);
+    });
+
+    menu.onclick = () => {
+        navbar.classList.toggle("active");
+    };
+    window.onscroll = () => {
+        navbar.classList.remove("active");
+    };
+
+</script>
+
+</html>
