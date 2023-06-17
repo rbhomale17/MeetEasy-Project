@@ -29,3 +29,11 @@
 
 
 # video server link https://nxm201-video-server.onrender.com
+
+## ***Landing Page***
+
+<img align="center" width="100%" height="400px" src="landingimg.png"  alt="">
+
+## ***About***
+
+Introducing our advanced video conferencing platform, connecting people effortlessly for both professional and personal purposes. Host or join high-quality virtual meetings, collaborate seamlessly, and stay connected globally. Enjoy crystal-clear audio, smooth video, and an intuitive interface for hassle-free communication. Join us and experience the future of online meetings for effortless collaboration and meaningful connections
