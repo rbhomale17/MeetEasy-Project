@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MeetEasy-Project</title>
+  <link rel="icon" href="/logoforHtml.png" type="image/icon type">
+  <meta charset="UTF-8">
+  <meta property="og:title" content="MeetEasy.com">
+  <meta name="description" content="Instant video meetings are just one click away !!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="./style/dashboard.css"> -->
+  <!-- <link rel="stylesheet" href="./style/room.css"> -->
+  <link rel="stylesheet" href="./public/index.css">
+  <link rel="stylesheet" href="./public/door.css">
+  <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navbar  Section Start -->
+
+  <header>
+    <a href="./landing.html" class="logo"><img src="./logo.png" alt=""></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar" id="nav-menu">
+      <li><a class="nav-link home" href="./plans.html">View Plans</a></li>
+      <li><a class="nav-link about" id="videoCall" href="https://nxm201-video-server.onrender.com">Video Call</a></li>
+      <li><a class="nav-link skills" id="ScreenShare" href="#">Screen Share</a></li>
+      <li><a class="nav-link projects" id="Message" href="./chat-message-F/index.html">Message</a></li>
+      <div class="dropdown">
+        <a href="./signup.html" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a>
+        <div class="dropdown-content">
+          <a id="log" onclick="logout()">Log out</a>
+        </div>
+      </div>
+    </ul>
+  </header>
+
+  <!-- Navbar Section End -->
+  <div class="room_container">
+    <div class="main">
+      <div class="create-join">
+        <div class="text">
+          <div class="head"></div>
+          <div class="subtext">Try Scrren Sharing & Video Calling</div>
+        </div>
+        <button id="createroom" class="createroom-butt unselectable">New Meeting</button><br>
+        <input type="text" name="room" spellcheck="false" placeholder="Enter a Code" id="roomcode" class="roomcode"><br>
+        <div class="joinroom unselectable" id="joinroom">Join Meeting</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div id="f-main">
+    <footer>
+      <div class="f-cont">
+        <div class="f-row">
+          <div class="col" id="about">
+            <h3>About Us</h3>
+            <p>Introducing our advanced video conferencing platform, connecting people effortlessly for both
+              professional and personal purposes. Host or join high-quality virtual meetings, collaborate
+              seamlessly,
+              and stay connected globally. Enjoy crystal-clear audio, smooth video, and an intuitive
+              interface for
+              hassle-free communication. Join us and experience the future of online meetings for
+              effortless
+              collaboration and meaningful connections.</p>
+            <div class="s-media">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a onclick="window.open('https://github.com/rbhomale17/deluxe-change-1738')"><i
+                  class="fa fa-github"></i></a>
+            </div>
+          </div>
+          <div class="col" id="company">
+            <h3>OUR COMPANY</h3>
+            <div class="link">
+              <a href="#">About Us</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+          <div class="col" id="category">
+            <h3>TOP CATEGORIES</h3>
+            <div class="link">
+              <a href="#">Messaging</a>
+              <a href="#">Video Calling</a>
+              <a href="#">Screen Share</a>
+            </div>
+          </div>
+          <div class="col" id="policy">
+            <h3>POLICIES & INFO</h3>
+            <div class="link">
+              <a href="#">Privacy Policy</a>
+              <a href="#">SUPPORT</a>
+              <a href="#">For Help, email to care@meeteasy.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FOOTER -->
+
+  <script language="JavaScript">
+    window.onload = function () {
+      var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+      if (mobile) {
+        alert("Visit this on a Computer/laptop for BETTER VIEW");
+      }
+    }
+  </script>
+  <script src="./public/room.js"></script>
+</body>
+
+</html>
+<script>
+  let userDetails = JSON.parse(localStorage.getItem('userDetails')) || {};
+
+  let header = document.querySelector("header");
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow", window.scrollY > 0);
+  });
+
+  menu.onclick = () => {
+    navbar.classList.toggle("active");
+  };
+  window.onscroll = () => {
+    navbar.classList.remove("active");
+  };
+
+  let signUser = document.getElementById('username');
+  signUser.textContent = `${userDetails.name}`
+
+  function logout() {
+
+    localStorage.removeItem('userDetails');
+    localStorage.removeItem('amount');
+    location.href = 'index.html'
+
+  }
+</script>

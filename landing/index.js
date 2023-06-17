@@ -1,9 +1,9 @@
 const express = require('express');
 const CORS = require('cors');
-const { photoRouter } = require('./routes/photos.router');
-const { connection } = require('./config/db');
-const { userRouter } = require('./routes/users.route');
-const { authRoute } = require('./routes/auth.routes');
+const { photoRouter } = require('./Backend/routes/photos.router');
+const { connection } = require('./Backend/config/db');
+const { userRouter } = require('./Backend/routes/users.route');
+const { authRoute } = require('./Backend/routes/auth.routes');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 
