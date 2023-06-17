@@ -9,9 +9,9 @@ const mongo_url = process.env.mongo_url_photos;
 const dbName = process.env.dbName;
 
 
-photoRouter.get('/', (req, res) => {
-    res.send('hhihihihohssafbajfbj')
-});
+// photoRouter.get('/', (req, res) => {
+//     res.send('hhihihihohssafbajfbj')
+// });
 
 // for getting image from DB after passing Image (_id)
 photoRouter.get('/files/:id', async (req, res) => {

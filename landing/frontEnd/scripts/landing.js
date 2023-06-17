@@ -58,6 +58,11 @@ const urlParams = new URLSearchParams(window.location.search);
 const userData = JSON.parse(decodeURIComponent(urlParams.get('userdata')));
 // Use the user data in your HTML page
 // console.log(userData); // Output the user data to the console or perform any other operations
+window.addEventListener('load', () => {
+  if (userData) {
+    localStorage.setItem('userDetails', JSON.stringify(userData))
+  }
+})
 if (userData) {
   localStorage.setItem('userDetails', JSON.stringify(userData))
 }
@@ -77,8 +82,8 @@ image.setAttribute('alt', userDetails.name);
 imageDiv.append(image);
 // http://localhost:3000/photos/files/648b04ab43adde36fe392b22
 
-let amount = localStorage.getItem('amount') ||{};
-function logout(){
+let amount = localStorage.getItem('amount') || {};
+function logout() {
 
   localStorage.removeItem('userDetails');
   localStorage.removeItem('amount');
