@@ -1,0 +1,26 @@
+{
+  "name": "server-video-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "shubham",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "peer": "^1.0.0",
+    "peerjs": "^1.4.7",
+    "socket.io": "^4.6.1",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=16 <18"
+  }
+}
