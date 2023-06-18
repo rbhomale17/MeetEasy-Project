@@ -1,5 +1,5 @@
 const socket=io('https://juvenile-tidy-seal.glitch.me/',{transports:["websocket"]})  
-// const socket=io('http://localhost:3000/view',{transports:["websocket"]})  
+// const socket = io('http://localhost:3000/view', { transports: ["websocket"] })
 const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
 let username;
@@ -39,36 +39,36 @@ var userList = [];
 rightCont.style.display = 'none';
 participantsCont.style.display = 'none';
 
-function showTime() {
-    var timeSpan = document.getElementById("time-display-span");
-  
-    var date = new Date();
-   
-    var hour = date.getHours();
-    var min = date.getMinutes();
-  
-    var h = hour % 12 || 12;
-    var ampm = (hour < 12 || hour === 24) ? "AM" : "PM";
+// function showTime() {
+//     var timeSpan = document.getElementById("time-display-span");
 
-    var time = h + ":" + min + " " + ampm;
-    timeSpan.innerText = `${time}`;
-  }
-  
-  setInterval(showTime, 500);
+//     var date = new Date();
 
-  
+//     var hour = date.getHours();
+//     var min = date.getMinutes();
+
+//     var h = hour % 12 || 12;
+//     var ampm = (hour < 12 || hour === 24) ? "AM" : "PM";
+
+//     var time = h + ":" + min + " " + ampm;
+//     timeSpan.innerText = `${time}`;
+//   }
+
+//   setInterval(showTime, 500);
+
+
 function addNewUserToParticipantsList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
     var liI = document.createElement("i");
     userElement.id = userId + "-user";
-    userElement.className ='participants-list-li';
-    liDiv.className ='participants-list-li-div';
-    liI.className ='fas fa-user mr-1';
-    var t = document.createTextNode(userName);
-    console.log(t)
+    userElement.className = 'participants-list-li';
+    liDiv.className = 'participants-list-li-div';
+    liI.className = 'fas fa-user mr-1';
+    var username = document.createTextNode(userName);
+    // console.log(t)
     liDiv.appendChild(liI);
-    liDiv.appendChild(t);
+    liDiv.appendChild(username);
     userElement.appendChild(liDiv);
     document.getElementById("participants-list-id").appendChild(userElement);
 }
@@ -120,7 +120,7 @@ function setColor(newcolor) {
     drawsize = 3;
 }
 
-function downloadCanvas(){
+function downloadCanvas() {
     var canvasLink = document.createElement('a');
     canvasLink.download = 'remote-talk-canvas-' + moment().format("DD.MM.YYYY h:mm:s") + '.png';
     canvasLink.href = document.getElementById('whiteboard').toDataURL()
@@ -141,9 +141,9 @@ window.onresize = reportWindowSize;
 //
 
 function clearBoard() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        socket.emit('store canvas', canvas.toDataURL());
-        socket.emit('clearBoard');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    socket.emit('store canvas', canvas.toDataURL());
+    socket.emit('clearBoard');
 }
 
 socket.on('clearBoard', () => {
@@ -217,13 +217,13 @@ mymuteicon.style.visibility = 'hidden';
 let myvideooff = document.querySelector("#myvideooff");
 myvideooff.style.visibility = 'hidden';
 
-const configuration = { 
+const configuration = {
     iceServers: [
         { urls: "stun:stun.stunprotocol.org" }
         // { urls: 'stun:stun.l.google.com:19302' },
         // { urls: 'stun:stun1.l.google.com:19302' }
     ]
- }
+}
 
 const mediaConstraints = { video: true, audio: true };
 
@@ -238,7 +238,7 @@ let mystream, myscreenshare;
 document.querySelector('.roomcode').innerHTML = `${roomid}`
 
 function getRoomCode() {
-    var roomCode = document.querySelector('.roomcode').textContent ;
+    var roomCode = document.querySelector('.roomcode').textContent;
     return roomCode.toString();
 }
 
@@ -270,7 +270,7 @@ function CopyClassText() {
     }
 
     document.querySelector(".copycode-button").textContent = "Copied!"
-    setTimeout(()=>{
+    setTimeout(() => {
         document.querySelector(".copycode-button").textContent = "";
     }, 5000);
 }
@@ -301,8 +301,8 @@ socket.on('user count', count => {
 })
 
 socket.on('user added to the list', (sId, userName) => {
-    console.log("abc")
-    if(!hostUser){
+    // console.log("abc")
+    if (!hostUser) {
         hostUser = true;
         hostUserId = sId;
     }
@@ -310,7 +310,7 @@ socket.on('user added to the list', (sId, userName) => {
     const userObj = {};
     userObj[sId] = userName;
     userList.push(userObj);
-    
+
     addNewUserToParticipantsList(sId, userName);
 
 })
@@ -376,7 +376,7 @@ function startCall() {
 }
 
 function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
-    
+
     cName[sid] = cname;
 
     micInfo[sid] = micinf;
@@ -516,21 +516,21 @@ chatWindowButt.addEventListener('click', () => {
     chatButton.click();
 });
 
-function rightContToggle(clickedBtn){
-    if(isFirstOpen){
+function rightContToggle(clickedBtn) {
+    if (isFirstOpen) {
         isFirstOpen = false;
         isRightContOpen = !isRightContOpen;
-    } else if(!isRightContOpen){
+    } else if (!isRightContOpen) {
         isRightContOpen = !isRightContOpen;
-    } else if(clickedBtn === lastClickedBtn){
+    } else if (clickedBtn === lastClickedBtn) {
         isRightContOpen = !isRightContOpen;
     }
 
     lastClickedBtn = clickedBtn;
 
-    if(isRightContOpen){
+    if (isRightContOpen) {
         rightCont.style.display = 'initial';
-    }else{
+    } else {
         rightCont.style.display = 'none';
     }
 }
@@ -553,9 +553,9 @@ function screenShareToggle() {
             });
         }
     } else {
-        screenMediaPromise = navigator.mediaDevices.getUserMedia({ 
+        screenMediaPromise = navigator.mediaDevices.getUserMedia({
             video: true,
-            cursor: true 
+            cursor: true
         });
     }
     screenMediaPromise
@@ -576,10 +576,10 @@ function screenShareToggle() {
             myvideo.muted = false;
             mystream = newStream;
             screenShareButt.innerHTML = (screenshareEnabled
-                ? `<i class="fas fa-desktop"></i><span class="tooltiptext">Stop Share Screen</span>`
+                ? `<i class="fas fa-desktop" ></i><span class="tooltiptext">Stop Share Screen</span>`
                 : `<i class="fas fa-desktop"></i><span class="tooltiptext">Share Screen</span>`
             );
-            myscreenshare.getVideoTracks()[0].onended = function() {
+            myscreenshare.getVideoTracks()[0].onended = function () {
                 if (screenshareEnabled) screenShareToggle();
             };
         })
@@ -708,14 +708,14 @@ socket.on('remove peer', sid => {
 })
 
 if (liveEditor.addEventListener) {
-    liveEditor.addEventListener('input', function() {
-    const content = liveEditor.value;
+    liveEditor.addEventListener('input', function () {
+        const content = liveEditor.value;
 
-    setTimeout(function() {
-        socket.emit('live-editor', content, hostUserId, username, roomid);
-    }, 100);
+        setTimeout(function () {
+            socket.emit('live-editor', content, hostUserId, username, roomid);
+        }, 100);
 
-  }, false);
+    }, false);
 }
 
 sendButton.addEventListener('click', () => {
@@ -759,7 +759,7 @@ socket.on('message', (msg, sendername, time) => {
 });
 
 socket.on('live-editor', (content, userId, username) => {
-    if(userId != hostUserId){
+    if (userId != hostUserId) {
         liveEditor.value = content;
     }
 });
@@ -792,7 +792,7 @@ videoButt.addEventListener('click', () => {
         }
         videoButt.innerHTML = `<i class="fas fa-video"></i>`;
         videoAllowed = 1;
-        videoButt.style.backgroundColor = "#6f9cf0";
+        videoButt.style.backgroundColor = "#97efbd";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'video')
@@ -834,7 +834,7 @@ audioButt.addEventListener('click', () => {
         }
         audioButt.innerHTML = `<i class="fas fa-microphone"></i>`;
         audioAllowed = 1;
-        audioButt.style.backgroundColor = "#6f9cf0";
+        audioButt.style.backgroundColor = "#97efbd";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'audio')
@@ -867,40 +867,40 @@ socket.on('action', (msg, sid) => {
     }
 })
 
-whiteboardButt.addEventListener('click', () => {
-    if(liveEditorVisible){
-        liveEditorButt.click();
-    }
+// whiteboardButt.addEventListener('click', () => {
+//     if(liveEditorVisible){
+//         liveEditorButt.click();
+//     }
 
-    if (boardVisisble) {
-        whiteboardCont.style.visibility = 'hidden';
-        boardVisisble = false;
-    }
-    else {
-        whiteboardCont.style.visibility = 'visible';
-        boardVisisble = true;
-    }
-})
+//     if (boardVisisble) {
+//         whiteboardCont.style.visibility = 'hidden';
+//         boardVisisble = false;
+//     }
+//     else {
+//         whiteboardCont.style.visibility = 'visible';
+//         boardVisisble = true;
+//     }
+// })
 
-liveEditorButt.addEventListener('click', () => {
+// liveEditorButt.addEventListener('click', () => {
 
-    if(boardVisisble){
-        whiteboardButt.click();
-    }
+//     if(boardVisisble){
+//         whiteboardButt.click();
+//     }
 
-    if (liveEditorVisible) {
-        liveEditorCont.style.visibility = 'hidden';
-        liveEditorVisible = false;
-    }
-    else {
-        liveEditorCont.style.visibility = 'visible';
-        liveEditorVisible = true;
-    }
-});
+//     if (liveEditorVisible) {
+//         liveEditorCont.style.visibility = 'hidden';
+//         liveEditorVisible = false;
+//     }
+//     else {
+//         liveEditorCont.style.visibility = 'visible';
+//         liveEditorVisible = true;
+//     }
+// });
 
-liveEditorCloseButt.addEventListener('click', () => {
-    liveEditorButt.click();
-})
+// liveEditorCloseButt.addEventListener('click', () => {
+//     liveEditorButt.click();
+// })
 
 endCall.addEventListener('click', () => {
     location.href = './landing.html';
