@@ -13,10 +13,10 @@ app.use(express.json());
 app.use(CORS())
 app.use(cookieParser())
 
-const staticFilesDir = path.join(__dirname, 'frontEnd');
+// const staticFilesDir = path.join(__dirname, 'frontEnd');
 
 // Serve static files
-app.use(express.static(staticFilesDir));
+// app.use(express.static(staticFilesDir));
 
 app.get('/', (req, res) => {
     res.send('welcome to MeetEasy server')
