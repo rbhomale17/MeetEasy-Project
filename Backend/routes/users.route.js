@@ -27,9 +27,9 @@ userRouter.get("/", async (req, res) => {
 userRouter.post("/register", registrationMiddleware, async (req, res) => {
     try {
         let { gender } = req.body;
-        if (gender == 'Male') req.body.picture = `http://localhost:3000/photos/files/648b63ba14f251ce9c8679c2`;
+        if (gender == 'Male') req.body.picture = `https://meeteasy-main-server.onrender.com/photos/files/648b63ba14f251ce9c8679c2`;
         else {
-            req.body.picture = `http://localhost:3000/photos/files/648b63c014f251ce9c8679c3`;
+            req.body.picture = `https://meeteasy-main-server.onrender.com/photos/files/648b63c014f251ce9c8679c3`;
         }
         const user = new UserModel(req.body);
         await user.save();
