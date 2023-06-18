@@ -23,8 +23,9 @@ authRoute.get("/auth/google/callback", passport.authenticate('google', {
     // res.cookie(`rerefreshToken`, rerefreshToken)
     // res.cookie('user', JSON.stringify(user))
     user.password = undefined;
-    // https://chimerical-vacherin-e1660a.netlify.app/landing.html
-    res.redirect(`http://127.0.0.1:5502/landing/frontEnd/landing.html?userdata=${encodeURIComponent(JSON.stringify(user))}`)
+    // https://chimerical-vacherin-e1660a.netlify.app/landing.html // dummy
+    // https://meeteasy.netlify.app/landing.html // real
+    res.redirect(`https://meeteasy.netlify.app/landing.html?userdata=${encodeURIComponent(JSON.stringify(user))}`)
     
   } else {
     res.send('failed to connect')

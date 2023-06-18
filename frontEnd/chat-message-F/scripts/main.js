@@ -93,9 +93,10 @@ function DispalyMessage(message) {
 
 let leavbtn = document.getElementById("leave-btn")
 leavbtn.addEventListener("click", () => {
+    console.log('clicked')
     let leavel = confirm("Are you Sure")
     if (leavel) {
-        window.location.href = "http://127.0.0.1:5501/Frontend/dashboard.html#"
+        window.location.href = "https://meeteasy.netlify.app/landing.html"
     }
 })
 
