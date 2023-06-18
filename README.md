@@ -28,11 +28,20 @@
 ***Back End: CSS, HTML, JAVASCRIPT, NodeJs, Express, MongoDB, Socket.io, Websocket & Mongoose.***
 
 
-# video server link https://nxm201-video-server.onrender.com
+## ***Important Links***
+
+***Project Live Link:- https://meeteasy.netlify.app/***
+
+***Video Server Link:- https://nxm201-video-server.onrender.com***
+
+***MeetEasy-Chat-Server:- https://meeteasy-chat.onrender.com***
+
+***MeetEasy Main Server:- https://meeteasy-main-server.onrender.com***
+
 
 ## ***Landing Page***
 
-<img align="center" width="100%" height="400px" src="landingimg.png"  alt="">
+![landingimg](https://github.com/rbhomale17/deluxe-change-1738/assets/121092445/c446d3d3-a3cc-46ff-abfc-dd0d137beb1f)
 
 ## ***About***
 
