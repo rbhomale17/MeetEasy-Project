@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MeetEasy-Project</title>
+    <link rel="icon" href="/logoforHtml.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="MeetEasy.com">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="./styles/room.css">
+    <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+    <script>
+        const params = new URLSearchParams(location.search);
+        if (!params.get("room")) location.href = "/";
+    </script>
+</head>
+
+<div class="loader">
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+</div>
+
+<body>
+    <div class="overlay" id="overlay">
+        <div class="box">
+            <div class="head-name">Enter your name</div>
+            <input type="text" class="name-field" placeholder="Type here.." id="name-field"></input><br>
+            <button class="continue-name">Continue</button>
+
+        </div>
+    </div>
+    <div class="container-room">
+        <div class="left-cont">
+
+            <div class="video-cont-single" id="vcont">
+                <div class="video-box">
+                    <video class="video-frame" id="vd1" autoplay playsinline>
+                    </video>
+                    <div class="nametag" id="myname">yourname</div>
+                    <div class="mute-icon" id="mymuteicon"><i class="fas fa-microphone-slash"></i></div>
+                    <div class="video-off" id="myvideooff">Video Off</div>
+                </div>
+            </div>
+
+            <div class="editor-cont">
+                <div class="label-close-div">
+                    <div class="live-editor-label">
+                        Live &nbsp; Editor
+                    </div>
+                    <div class="live-text-editor-close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                </div>
+                <textarea id="live-editor" autofocus placeholder="Start writing here..." rows="20"
+                    cols="100"></textarea>
+            </div>
+
+            <div class="whiteboard-cont"><canvas id="whiteboard" height="1000" width="1000"></canvas>
+                <div class="colors-cont">
+                    <div class="black" onclick="setColor('black')"></div>
+                    <div class="red" onclick="setColor('#e74c3c')"></div>
+                    <div class="blue" onclick="setColor('#3498db')"></div>
+                    <div class="orange" onclick="setColor('#e67e22')"></div>
+                    <div class="yellow" onclick="setColor('#f1c40f')"></div>
+                    <div class="pink" onclick="setColor('#fd79a8')"></div>
+                    <div class="brown" onclick="setColor('#834c32')"></div>
+                    <div class="green" onclick="setColor('#badc58')"></div>
+                    <div class="purple" onclick="setColor('#9b59b6')"></div>
+                    <div class="maroon" onclick="setColor('#800000')"></div>
+                    <div class="aquamarine" onclick="setColor('#00FFFF')"></div>
+                    <div class="grey" onclick="setColor('gray')"></div>
+                    <div class="eraser" onclick="setEraser()"><i class="fas fa-eraser"></i></div>
+                    <div class="clearboard" onclick="clearBoard()"><i class="fas fa-trash-alt"></i></div>
+                    <div class="download-canvas" onclick="downloadCanvas()"><i class="fas fa-download"></i></div>
+                </div>
+            </div>
+
+            <div class="footer">
+
+                <!-- <div class="time-display-div">
+                    <span id="time-display-span">
+
+                    </span>
+                </div> -->
+
+                <div class="utils">
+
+                    <div class="audio">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="novideo">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="screenshare tooltip">
+                        <i class="fas fa-desktop"></i>
+                        <span class="tooltiptext">Share Screen</span>
+                    </div>
+                    <!-- <div class="board-icon tooltip">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span class="tooltiptext">Whiteboard</span>
+                    </div>
+                    <div class="live-text-editor tooltip">
+                        <i class="fa fa-clipboard"></i>
+                        <span class="tooltiptext">Live Text Editor</span>
+                    </div> -->
+                    <div class="participants tooltip">
+                        <i class="fas fa-users mr-1"></i>
+                        <span class="tooltiptext">Participants</span>
+                    </div>
+                    <div class="chat-tooltip tooltip">
+                        <i class="fas fa-comment-alt mr-1"></i>
+                        <span class="tooltiptext">Chat</span>
+                    </div>
+                    <div class="endcall tooltip">
+                        <i class="fas fa-phone-slash"></i>
+                        <span class="tooltiptext">End Call</span>
+                    </div>
+
+
+                </div>
+                <div class="copycode-cont">
+                    <div class="roomcode"></div>
+                    <i class="copycode-button fa fa-copy" onclick="CopyClassText()"></i>
+                    <!-- <div class="whatsapp-code tooltip" onclick="shareCodeOnWp()">
+                        <i class="fa fa-whatsapp"></i>
+                        <span class="tooltiptext">Send Invite On WhatsApp</span>
+                    </div> -->
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="right-cont">
+            <div class="head-title">
+
+                <div class="chats"><i class="fas fa-comment-alt mr-1"></i>Chats</div>
+                <div class="participants-right-cont-switch"><i class="fas fa-users mr-1"></i>Participants</div>
+
+
+            </div>
+
+            <div class="chat-cont">
+
+            </div>
+
+            <div class="participants-cont">
+                <ul id="participants-list-id" class="participants-list">
+
+                </ul>
+            </div>
+
+            <div class="chat-input-cont">
+                <div class="ci-cont"><input type="text" class="chat-input" placeholder="Send a message to everyone">
+                </div>
+                <div class="ci-send"><i class="chat-send fa fa-send"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./public/screenshare.js"></script>
+</body>
+
+</html>

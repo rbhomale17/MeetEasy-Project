@@ -9,10 +9,10 @@
   <meta property="og:title" content="MeetEasy.com">
   <meta name="description" content="Instant video meetings are just one click away !!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="dashboard.css">
-  <link rel="stylesheet" href="door.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
+  <!-- <link rel="stylesheet" href="./style/dashboard.css"> -->
+  <!-- <link rel="stylesheet" href="./style/room.css"> -->
+  <link rel="stylesheet" href="./public/index.css">
+  <link rel="stylesheet" href="./public/door.css">
   <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
 
@@ -22,83 +22,31 @@
   <!-- Navbar  Section Start -->
 
   <header>
-    <a href="#" class="logo"><img src="logo.png" alt=""></a>
+    <a href="./landing.html" class="logo"><img src="./logo.png" alt=""></a>
 
     <div class="bx bx-menu" id="menu-icon"></div>
 
     <ul class="navbar" id="nav-menu">
-      <li><a class="nav-link home" href="#Plans">View Plans</a></li>
-      <li><a class="nav-link about" id="videoCall" href="#features">Video Call</a></li>
-      <li><a class="nav-link skills" id="ScreenShare" href="#features">Screen Share</a></li>
-      <li><a class="nav-link projects" id="Message" href="#features">Message</a></li>
+      <li><a class="nav-link home" href="./plans.html">View Plans</a></li>
+      <li><a class="nav-link about" id="videoCall" href="https://nxm201-video-server.onrender.com">Video Call</a></li>
+      <li><a class="nav-link skills" id="ScreenShare" href="#">Screen Share</a></li>
+      <li><a class="nav-link projects" id="Message" href="./chat-message-F/index.html">Message</a></li>
       <div class="dropdown">
-        <!-- <a href="#" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a> -->
-        <!-- <div class="dropdown-content">
+        <a href="./signup.html" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a>
+        <div class="dropdown-content">
           <a id="log" onclick="logout()">Log out</a>
-        </div> -->
+        </div>
       </div>
     </ul>
   </header>
 
   <!-- Navbar Section End -->
-  <!-- <nav>
-    <i class="fa-solid fa-bars" id="hamburger"></i>
-    <div id="nav_right_side">
-      <div id="brand_name">
-        <a href="#" class="indexstyle1"
-          ><img
-            src="logo.jpg"
-            alt=""
-            height="100%"
-            width="100% "
-        /></a>
-      </div>
-    </div>
-    <div id="nav_left_side">
-      <div>
-        <i class="fa-solid fa-video"></i
-        ><span
-          ><a
-            href="#"
-            class="indexstyle"
-            >Video Call</a
-          >
-        </span>
-      </div>
-      <div>
-        <i class="fa-solid fa-video"></i
-        ><span
-          ><a
-            href="#"
-            class="indexstyle"
-            >Screen Share</a
-          >
-        </span>
-      </div>
-      <div>
-        <i class="fa-solid fa-message"></i
-        ><span
-
-          ><a
-            href="#"
-            class="indexstyle"
-            >Message</a
-          >
-
-        </span>
-      </div>
-      <div>
-        <i class="fa-solid fa-user"></i
-        ><span><a id="name-user" href="#" class="indexstyle"></a> </span>
-      </div>
-    </div>
-  </nav> -->
   <div class="room_container">
     <div class="main">
       <div class="create-join">
         <div class="text">
           <div class="head"></div>
-          <div class="subtext">Try Video Calling</div>
+          <div class="subtext">Try Scrren Sharing & Video Calling</div>
         </div>
         <button id="createroom" class="createroom-butt unselectable">New Meeting</button><br>
         <input type="text" name="room" spellcheck="false" placeholder="Enter a Code" id="roomcode" class="roomcode"><br>
@@ -106,6 +54,7 @@
       </div>
     </div>
   </div>
+
   <!-- FOOTER -->
 
   <div id="f-main">
@@ -159,6 +108,7 @@
   </div>
 
   <!-- FOOTER -->
+
   <script language="JavaScript">
     window.onload = function () {
       var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
@@ -167,9 +117,36 @@
       }
     }
   </script>
-
+  <script src="./public/room.js"></script>
 </body>
 
 </html>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-<script src="door.js"></script>
+<script>
+  let userDetails = JSON.parse(localStorage.getItem('userDetails')) || {};
+
+  let header = document.querySelector("header");
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow", window.scrollY > 0);
+  });
+
+  menu.onclick = () => {
+    navbar.classList.toggle("active");
+  };
+  window.onscroll = () => {
+    navbar.classList.remove("active");
+  };
+
+  let signUser = document.getElementById('username');
+  signUser.textContent = `${userDetails.name}`
+
+  function logout() {
+
+    localStorage.removeItem('userDetails');
+    localStorage.removeItem('amount');
+    location.href = 'index.html'
+
+  }
+</script>
