@@ -38,8 +38,7 @@ img {
 }
 
 body {
-  background-color: #ffffff;
-  background-image:url("https://images3.alphacoders.com/876/thumb-1920-876762.jpg");
+  background-color: #aeecba;
   background-size:100%;
 }
 
@@ -632,7 +631,7 @@ nav .logo {
   background: transparent;
 }
 .container-room .left-cont .footer .utils .audio {
-  background-color: #6f9cf0;
+  background-color: #97efbd;
   text-align: center;
   color: white;
   padding: 10px;
@@ -646,7 +645,7 @@ nav .logo {
   background-color: #393e46;
 }
 .container-room .left-cont .footer .utils .novideo {
-  background-color: #6f9cf0;
+  background-color: #97efbd;
   text-align: center;
   margin-left: 10px;
   color: white;
@@ -794,7 +793,7 @@ nav .logo {
   display: flex;
 }
 .container-room .left-cont .footer .copycode-cont .roomcode {
-  color: #6f9cf0;
+  color: rgb(3, 21, 11);
   padding: 10px 20px;
   background-color: white;
   border-left: 3px solid #6f9cf0;
@@ -807,7 +806,7 @@ nav .logo {
   /* width: 100px; */
   text-align: center;
   color: white;
-  background-color: #6f9cf0;
+  background-color: #86eea5;
   border: none;
   font-weight: bold;
   outline: none;
@@ -1019,10 +1018,11 @@ nav .logo {
 }
 
 .tooltip .tooltiptext {
+  /* color: ; */
   visibility: hidden;
   width: 120px;
   background-color: #0f0f0f;
-  color: #fff;
+  color: #49ca4b;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
