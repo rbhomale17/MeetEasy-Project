@@ -1,4 +1,4 @@
-const BaseUrl = "http://localhost:3000";
+const BaseUrl = "https://meeteasy-main-server.onrender.com";
 const loginUrl = `${BaseUrl}/users/login`
 
 let emailError = document.getElementById("email-error")

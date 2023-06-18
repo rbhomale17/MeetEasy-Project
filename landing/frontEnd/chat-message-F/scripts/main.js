@@ -99,5 +99,3 @@ leavbtn.addEventListener("click", () => {
     }
 })
 
-
-// https://mirrormate.onrender.com
