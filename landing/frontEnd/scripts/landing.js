@@ -13,7 +13,7 @@ document.getElementById('uploadButton').addEventListener('click', (e) => {
   formData.append('file', file);
   // console.log(formData);
 
-  fetch('http://localhost:3000/photos/upload', {
+  fetch('https://meeteasy-main-server.onrender.com/photos/upload', {
     method: 'POST',
     body: formData
   })
@@ -80,7 +80,7 @@ let image = document.createElement('img');
 image.setAttribute('src', userDetails.picture);
 image.setAttribute('alt', userDetails.name);
 imageDiv.append(image);
-// http://localhost:3000/photos/files/648b04ab43adde36fe392b22
+// https://meeteasy-main-server.onrender.com/photos/files/648b04ab43adde36fe392b22
 
 let amount = localStorage.getItem('amount') || {};
 function logout() {
