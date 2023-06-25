@@ -313,7 +313,7 @@ nav {
 }
 
 .btn {
-  background-color: rgba(22, 125, 200, 1);
+  background-color: rgb(22, 200, 129);
   border-radius: 6px;
 }
 
@@ -429,13 +429,11 @@ label {
 }
 
 .card {
-
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
   width: 100%;
   padding: 15px;
-  background-color: #7adfb0;
-
+  background-color: #b5edd3;
 }
 
 @media (max-width: 700px) {

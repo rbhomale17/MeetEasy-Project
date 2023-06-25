@@ -49,7 +49,7 @@ socket.on("allusers", (users) => {
     // userList.innerHTML=""
     users.forEach(ele => {
         let list = document.createElement("li")
-        list.innerText = ele.username
+        list.innerHTML = `<i class="fa fa-user"></i>  ${ele.username}`
         userList.append(list)
     });
 })

@@ -49,7 +49,7 @@ socket.on("allusers", (users) => {
     // userList.innerHTML=""
     users.forEach(ele => {
         let list = document.createElement("li")
-        list.innerText = ele.username
+        list.innerHTML = `<i class="fa fa-user"></i>  ${ele.username}`
         userList.append(list)
     });
 })
@@ -93,10 +93,9 @@ function DispalyMessage(message) {
 
 let leavbtn = document.getElementById("leave-btn")
 leavbtn.addEventListener("click", () => {
-    console.log('clicked')
     let leavel = confirm("Are you Sure")
     if (leavel) {
-        window.location.href = "https://meeteasy.netlify.app/landing.html"
+        window.location.href = "http://127.0.0.1:5501/Frontend/dashboard.html#"
     }
 })
 
