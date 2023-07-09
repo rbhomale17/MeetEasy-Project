@@ -27,9 +27,9 @@
 
 ## ***Tech Stacks***
 
-***Front End: CSS, HTML, JAVASCRIPT***
+***Front End: CSS, HTML, JavaScript***
 
-***Back End: CSS, HTML, JAVASCRIPT, NodeJs, Express, MongoDB, Socket.io, Websocket & Mongoose, npm packages.***
+***Back End: CSS, HTML, JavaScript, NodeJs, Express, MongoDB, Socket.io, Websocket & Mongoose, npm packages.***
 
 
 ## ***Important Links***
