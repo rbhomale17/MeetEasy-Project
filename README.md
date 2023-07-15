@@ -29,7 +29,7 @@
 
 ***Front End: CSS, HTML, JavaScript***
 
-***Back End: CSS, HTML, JavaScript, NodeJs, Express, MongoDB, Socket.io, Websocket & Mongoose, npm packages.***
+***Back End: CSS, HTML, JavaScript, Node.js, Express, MongoDB, Socket.io, Websocket & Mongoose, npm packages.***
 
 
 ## ***Important Links***
