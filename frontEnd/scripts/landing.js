@@ -63,8 +63,24 @@ window.addEventListener('load', () => {
     localStorage.setItem('userDetails', JSON.stringify(userData))
   }
 })
-if (userData) {
-  localStorage.setItem('userDetails', JSON.stringify(userData))
+
+// Check if the page has already been reloaded
+const hasReloaded = sessionStorage.getItem('hasReloaded');
+
+if (!hasReloaded) {
+  // Perform necessary operations before the reload
+  if (userData) {
+    localStorage.setItem('userDetails', JSON.stringify(userData));
+  }
+  console.log(userData);
+
+  // Set the flag indicating the page has been reloaded
+  sessionStorage.setItem('hasReloaded', true);
+
+  // Reload the page
+  setTimeout(() => {
+    window.location.reload();
+  }, 2000);
 }
 
 let signUser = document.getElementById('username');
