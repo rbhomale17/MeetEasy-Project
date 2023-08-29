@@ -28,9 +28,9 @@ function logout() {
 }
 
 // userDetails.name = 'rushi'
-let signUser = document.getElementById('username');
+// let signUser = document.getElementById('username');
 
-signUser.textContent = `${userDetails.name}`
+// signUser.textContent = `${userDetails.name}`
 
 let userName
 const createroomtext = 'Creating Meeting...';
