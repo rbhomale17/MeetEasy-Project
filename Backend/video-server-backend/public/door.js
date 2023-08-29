@@ -23,7 +23,7 @@ function logout() {
 
     localStorage.removeItem('userDetails');
     localStorage.removeItem('amount');
-    location.href = 'index.html' // add netlify link here
+    window.location.href = 'https://meeteasy.netlify.app/' // add netlify link here
 
 }
 
