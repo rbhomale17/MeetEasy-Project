@@ -23,14 +23,14 @@ function logout() {
 
     localStorage.removeItem('userDetails');
     localStorage.removeItem('amount');
-    location.href = 'index.html' // add netlify link here
+    window.location.href = 'https://meeteasy.netlify.app/' // add netlify link here
 
 }
 
 // userDetails.name = 'rushi'
-let signUser = document.getElementById('username');
+// let signUser = document.getElementById('username');
 
-signUser.textContent = `${userDetails.name}`
+// signUser.textContent = `${userDetails.name}`
 
 let userName
 const createroomtext = 'Creating Meeting...';

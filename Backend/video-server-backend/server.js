@@ -20,7 +20,7 @@ app.set('view engine', 'ejs'); // Set EJS as the template engine
 
 app.get('/view', (req, res) => {
     console.log(__dirname);
-  res.render('door'); // Replace 'your-ejs-file' with the actual filename (without the extension) of your EJS file
+    res.render('door'); // Replace 'your-ejs-file' with the actual filename (without the extension) of your EJS file
 });
 
 app.get('/room', (req, res) => {
@@ -31,9 +31,9 @@ app.get('/:room', (req, res) => {
 })
 
 
-const PORT=process.env.port || 8080
+const PORT = process.env.port || 8080
 const server = app.listen(PORT, () => {
-    console.log(`Video Call Server is running at PORT ${PORT}`)
+    console.log(`Video Call Server is running at PORT ${PORT}, & http://localhost:${PORT}`)
 })
 
 const io = require('socket.io')(server)
@@ -45,7 +45,7 @@ const peerServer = ExpressPeerServer(server, {
     debug: true,
 });
 app.use("/peerjs", peerServer);
- 
+
 io.on('connection', (socket) => {
     console.log("New Connection at " + socket.id)
     socket.on("join-room", (roomId, userId) => {

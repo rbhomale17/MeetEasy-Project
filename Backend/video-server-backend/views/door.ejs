@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
   <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
@@ -22,23 +25,24 @@
   <!-- Navbar  Section Start -->
 
   <header>
-    <a href="#" class="logo"><img src="logo.png" alt=""></a>
+    <a href="https://meeteasy.netlify.app/landing" class="logo"><img src="logo.png" alt=""></a>
 
     <div class="bx bx-menu" id="menu-icon"></div>
 
     <ul class="navbar" id="nav-menu">
-      <li><a class="nav-link home" href="#Plans">View Plans</a></li>
-      <li><a class="nav-link about" id="videoCall" href="#features">Video Call</a></li>
-      <li><a class="nav-link skills" id="ScreenShare" href="#features">Screen Share</a></li>
-      <li><a class="nav-link projects" id="Message" href="#features">Message</a></li>
-      <div class="dropdown">
-        <!-- <a href="#" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a> -->
-        <!-- <div class="dropdown-content">
+      <li><a class="nav-link home" href="https://meeteasy.netlify.app/plans">View Plans</a></li>
+      <li><a class="nav-link about" id="videoCall" href="#">Video Call</a></li>
+      <li><a class="nav-link skills" id="ScreenShare" href="https://meeteasy.netlify.app/room">Screen Share</a></li>
+      <li><a class="nav-link projects" id="Message" href="https://meeteasy.netlify.app/chat-message-f/">Message</a></li>
+      <!-- <div class="dropdown">
+        <a href="#" id="sign-in"><i class="fa fa-user"></i> <span id="username">sign-up/Log-in</span></a>
+        <div class="dropdown-content">
           <a id="log" onclick="logout()">Log out</a>
         </div> -->
       </div>
     </ul>
   </header>
+
 
   <!-- Navbar Section End -->
   <!-- <nav>
@@ -173,3 +177,20 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 <script src="door.js"></script>
+
+<!-- <script>
+  let header = document.querySelector("header");
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow", window.scrollY > 0);
+  });
+
+  menu.onclick = () => {
+    navbar.classList.toggle("active");
+  };
+  window.onscroll = () => {
+    navbar.classList.remove("active");
+  };
+</script> -->
