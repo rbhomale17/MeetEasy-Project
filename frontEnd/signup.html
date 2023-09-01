@@ -57,7 +57,7 @@
 
       <div class="input-group">
         <label>Gender</label>
-        <select onmouseleave="validationGender()" name="" id="gender">
+        <select onchange="validationGender()" name="" id="gender">
           <option value="">Select You Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -67,7 +67,7 @@
 
       <div class="input-group">
         <label>Password</label>
-        <input onmouseleave="validationPassword()" type="password" id="password" placeholder="Enter Your Password">
+        <input onkeyup="validationPassword()" type="password" id="password" placeholder="Enter Your Password">
         <span id="password-error"></span>
       </div>
       <button id="Submit">Submit</button>

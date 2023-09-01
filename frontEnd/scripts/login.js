@@ -31,7 +31,7 @@ function validationPassword() {
         passwordError.innerHTML = '<i class="fas fa-check-circle"></i>';
         return true;
     } else {
-        alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
+        // alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
         passwordError.innerHTML = `<i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e4503f;"></i>`;
         return false;
     }
@@ -42,6 +42,7 @@ function validationPassword() {
 function validateSubmit() {
     if (!validationPassword() || !validationEmail()) {
         submitError.innerHTML = "Please fill the data to submit."
+        alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
         return false
     } else {
         loginUser();

@@ -8,7 +8,7 @@ let passwordError = document.getElementById("password-error")
 let submitError = document.getElementById("submit-error")
 
 // validation for first name from input
-
+ 
 function validationFirstName() {
     let name = document.getElementById("name").value;
     const nameInput = /^[A-Za-z\s]+$/.test(name);
@@ -48,7 +48,7 @@ function validationPassword() {
         passwordError.innerHTML = '<i class="fas fa-check-circle"></i>';
         return true;
     } else {
-        alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
+        // alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
         passwordError.innerHTML = `<i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e4503f;"></i>`;
         return false;
     }
@@ -81,6 +81,7 @@ function validationGender() {
 function validateSubmit() {
     if (!validationPassword() || !validationEmail() || !validationGender() || !validationFirstName()) {
         submitError.innerHTML = "Please fill correct Data."
+        alert("Password is invalid. It should have a minimum length of 8 characters, contain at least one letter and one digit, and may include any symbol.");
         return false
     } else {
         // flag = true;
