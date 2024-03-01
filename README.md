@@ -52,7 +52,7 @@ Introducing our advanced video conferencing platform, connecting people effortle
 - For Backend
 1. Start the server using `npm start`.
 2. Access the application at [http://localhost:3000](http://localhost:3000).
-- Fro Frontend
+- Fro Frontend 
 ```terminal
 cd frontend
 Index.html start with Live server
